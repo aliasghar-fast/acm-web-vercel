@@ -911,8 +911,12 @@
     }
 
     /* run only while this page is visible */
+    let wasActive = section.classList.contains('active');
     new MutationObserver(() => {
-      if (section.classList.contains('active')) { start(); reveal(); } else { stop(); }
+      const isActive = section.classList.contains('active');
+      if (isActive === wasActive) return; /* ignore our own class changes (js-reveal, nox) */
+      wasActive = isActive;
+      if (isActive) { start(); reveal(); } else { stop(); }
     }).observe(section, { attributes: true, attributeFilter: ['class'] });
     window.addEventListener('resize', () => { if (raf) { resize(); seed(); } });
 
@@ -952,7 +956,7 @@
     let io = null;
     function reveal() {
       if (reduce || !('IntersectionObserver' in window)) return;
-      section.classList.add('js-reveal');
+      if (!section.classList.contains('js-reveal')) section.classList.add('js-reveal');
       if (!io) {
         io = new IntersectionObserver((entries) => {
           entries.forEach(en => {
