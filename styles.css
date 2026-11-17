@@ -438,47 +438,81 @@ section.content-page {
   background: rgba(4, 24, 38, 0.65);
 }
 
-/* Coders Club Showcase (Deep Circuit Navy-Teal Distinction) */
-.coders-club-section {
-  background: var(--acm-deep);
+/* Coders' Cup Showcase — subtle Hogwarts-inspired theme */
+.coders-cup-section {
+  --hp-gold: #D4AF37;
+  --hp-gold-soft: #E8D08A;
+  --hp-parchment: #F4E9CF;
+  --hp-burgundy: #5A1A24;
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(212, 175, 55, 0.10), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(90, 26, 36, 0.35), transparent 55%),
+    linear-gradient(180deg, #0A2238 0%, #08192B 100%);
   color: #FFFFFF;
   padding: 64px 0;
+  position: relative;
 }
 
-.coders-club-section .section-label {
-  color: var(--acm-cyan);
+/* Four-house crest stripe: Gryffindor, Hufflepuff, Ravenclaw, Slytherin */
+.coders-cup-section::before {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: -64px;
+  margin-bottom: 64px;
+  background: linear-gradient(90deg,
+    #7F0909 0 25%, #D4AF37 25% 50%, #0E3A6B 50% 75%, #1A472A 75% 100%);
 }
 
-.coders-club-section .section-header h2 {
-  color: #FFFFFF;
+.coders-cup-section .section-label {
+  color: var(--hp-gold);
 }
 
-.coders-club-section .section-header p {
-  color: rgba(255, 255, 255, 0.9);
+.coders-cup-section .section-label::before {
+  content: "\26A1\FE0E  ";
+  letter-spacing: 0;
+}
+
+.coders-cup-section .section-header h2 {
+  color: var(--hp-parchment);
+  font-family: 'Cinzel', 'Libre Baskerville', Georgia, serif;
+  letter-spacing: 0.02em;
+}
+
+.coders-cup-section .section-header p {
+  color: rgba(244, 233, 207, 0.9);
 }
 
 .cc-subheading {
-  color: #FFFFFF;
-  font-size: 1.35rem;
+  color: var(--hp-parchment);
+  font-family: 'Cinzel', 'Libre Baskerville', Georgia, serif;
+  font-size: 1.3rem;
   margin: 36px 0 18px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(114, 199, 245, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
 }
 
+
 .cc-card {
-  background: var(--acm-darker);
-  border: 1px solid rgba(114, 199, 245, 0.2);
-  border-top: 3px solid var(--acm-blue-bright);
+  background: linear-gradient(180deg, rgba(6, 31, 51, 0.95), rgba(8, 24, 40, 0.95));
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-top: 3px solid var(--hp-gold);
   padding: 22px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(212, 175, 55, 0.12);
 }
 
 .cc-card h3 {
-  color: #FFFFFF;
+  color: var(--hp-parchment);
   margin-bottom: 8px;
 }
 
 .cc-card .meta {
-  color: var(--acm-cyan);
+  color: var(--hp-gold-soft);
 }
 
 .cc-card p,
@@ -493,7 +527,16 @@ section.content-page {
 }
 
 .cc-card .poster-img {
-  border-color: rgba(114, 199, 245, 0.22);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.coders-cup-section .stitch-wrapper {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.coders-cup-section .stitch-caption {
+  color: var(--hp-parchment);
+  font-style: italic;
 }
 
 /* Leadership Hierarchy */
