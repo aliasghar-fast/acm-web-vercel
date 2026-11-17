@@ -1,13 +1,16 @@
 :root {
-  --crimson: #A51C30;
-  --crimson-dark: #7E1424;
-  --yale-blue: #00356B;
-  --yale-dark: #002347;
+  /* ACM NUCES Karachi Logo Color Palette */
+  --acm-blue: #1B7FB8;
+  --acm-blue-bright: #2898D8;
+  --acm-deep: #0B496E;
+  --acm-darker: #06314B;
+  --acm-cyan: #72C7F5;
+  --acm-slate: #475C6C;
   --bg-white: #FFFFFF;
-  --bg-ivory: #F8F7F4;
-  --text-main: #1A1A1A;
-  --text-muted: #4A4A4A;
-  --border: #DCD9D0;
+  --bg-tint: #F3F8FB;
+  --text-main: #13222E;
+  --text-muted: #475C6C;
+  --border: #D2E0E9;
 }
 
 * {
@@ -44,8 +47,8 @@ h1, h2, h3, .serif {
 
 /* Top Institutional Utility Bar */
 .utility-bar {
-  background: #141414;
-  color: #E5E5E5;
+  background: #072436;
+  color: #E2EEF5;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -63,7 +66,7 @@ h1, h2, h3, .serif {
 /* Main Header */
 header {
   background: var(--bg-white);
-  border-bottom: 3px solid var(--crimson);
+  border-bottom: 3px solid var(--acm-blue);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -102,13 +105,14 @@ header {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--crimson);
+  color: var(--acm-blue);
 }
 
 .brand-title {
   font-family: 'Libre Baskerville', serif;
   font-size: 1.3rem;
   font-weight: 700;
+  color: var(--acm-deep);
 }
 
 nav ul {
@@ -130,11 +134,11 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: var(--crimson);
-  border-bottom-color: var(--crimson);
+  color: var(--acm-blue);
+  border-bottom-color: var(--acm-blue);
 }
 
-/* Multi-Page View Switching (No Scrolling) */
+/* Multi-Page View Switching */
 .page-view {
   display: none;
   min-height: calc(100vh - 260px);
@@ -150,9 +154,9 @@ nav a.active {
   to { opacity: 1; }
 }
 
-/* 4.1 Hero / Landing Page */
+/* Hero / Landing Page */
 .hero {
-  background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+  background: linear-gradient(135deg, var(--acm-blue) 0%, var(--acm-deep) 100%);
   color: #FFFFFF;
   padding: 68px 0;
   border-bottom: 1px solid var(--border);
@@ -171,7 +175,7 @@ nav a.active {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
   padding-bottom: 4px;
   margin-bottom: 16px;
 }
@@ -183,7 +187,7 @@ nav a.active {
 
 .hero p {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.94);
   margin-bottom: 28px;
   max-width: 60ch;
 }
@@ -201,16 +205,16 @@ nav a.active {
   font-weight: 600;
   text-decoration: none;
   border-radius: 2px;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, background-color 0.2s;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .btn-white {
   background: #FFFFFF;
-  color: var(--crimson);
+  color: var(--acm-deep);
 }
 
 .btn-outline {
@@ -222,14 +226,14 @@ nav a.active {
   background: #FFFFFF;
   color: var(--text-main);
   padding: 28px;
-  border-top: 5px solid var(--yale-blue);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  border-top: 5px solid var(--acm-slate);
+  box-shadow: 0 12px 30px rgba(6, 36, 54, 0.22);
 }
 
 .hero-card h3 {
   font-size: 1.15rem;
   margin-bottom: 12px;
-  color: var(--yale-blue);
+  color: var(--acm-deep);
 }
 
 .hero-card ul {
@@ -245,7 +249,7 @@ nav a.active {
 /* Home Quick Overview Strip */
 .home-overview {
   padding: 56px 0;
-  background: var(--bg-ivory);
+  background: var(--bg-tint);
 }
 
 /* Generic Section Styling */
@@ -253,8 +257,8 @@ section.content-page {
   padding: 64px 0;
 }
 
-.bg-ivory {
-  background: var(--bg-ivory);
+.bg-tint {
+  background: var(--bg-tint);
 }
 
 .section-header {
@@ -267,13 +271,14 @@ section.content-page {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--crimson);
+  color: var(--acm-blue);
   display: block;
   margin-bottom: 8px;
 }
 
 .section-header h2 {
   font-size: clamp(1.65rem, 3vw, 2.2rem);
+  color: var(--acm-deep);
   margin-bottom: 12px;
 }
 
@@ -298,12 +303,13 @@ section.content-page {
 .card {
   background: var(--bg-white);
   border: 1px solid var(--border);
-  border-top: 3px solid var(--crimson);
+  border-top: 3px solid var(--acm-blue);
   padding: 24px;
 }
 
 .card h3 {
   font-size: 1.15rem;
+  color: var(--acm-deep);
   margin-bottom: 10px;
 }
 
@@ -312,7 +318,7 @@ section.content-page {
   margin-top: 14px;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--crimson);
+  color: var(--acm-blue);
   text-decoration: none;
 }
 
@@ -320,12 +326,23 @@ section.content-page {
   text-decoration: underline;
 }
 
-.card-link.navy-link {
-  color: var(--yale-blue);
+.card-link.slate-link {
+  color: var(--acm-slate);
 }
 
-.card-detail .card-link {
-  margin-top: 0;
+.card-detail {
+  margin-top: 8px;
+  font-size: 0.94rem;
+}
+
+.card-detail a {
+  color: var(--acm-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-detail a:hover {
+  text-decoration: underline;
 }
 
 .meta {
@@ -333,11 +350,6 @@ section.content-page {
   color: var(--text-muted);
   margin-bottom: 12px;
   font-weight: 600;
-}
-
-.card-detail {
-  margin-top: 8px;
-  font-size: 0.94rem;
 }
 
 .card-list {
@@ -351,7 +363,7 @@ section.content-page {
 }
 
 .card-list a {
-  color: var(--crimson);
+  color: var(--acm-blue);
   text-decoration: none;
   font-weight: 500;
 }
@@ -366,22 +378,13 @@ section.content-page {
 
 .tag {
   display: inline-block;
-  background: var(--bg-ivory);
+  background: var(--bg-tint);
   border: 1px solid var(--border);
+  color: var(--acm-deep);
   font-size: 0.75rem;
   font-weight: 600;
   padding: 3px 8px;
   margin: 4px 4px 0 0;
-}
-
-.placeholder {
-  background: #FFF8E7;
-  border-left: 3px solid #C68A00;
-  padding: 4px 8px;
-  font-size: 0.84rem;
-  color: #5C4000;
-  display: inline-block;
-  margin-top: 6px;
 }
 
 /* Media & Stitched Instagram Grid Banners */
@@ -393,7 +396,7 @@ section.content-page {
   display: block;
   margin-bottom: 14px;
   border: 1px solid var(--border);
-  background: #111111;
+  background: #0B2536;
 }
 
 .logo-contain {
@@ -409,8 +412,8 @@ section.content-page {
 
 .stitch-wrapper {
   margin-bottom: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: #0A1628;
+  border: 1px solid rgba(114, 199, 245, 0.28);
+  background: #052033;
 }
 
 .stitch-banner {
@@ -431,23 +434,27 @@ section.content-page {
 .stitch-caption {
   padding: 10px 16px;
   font-size: 0.84rem;
-  color: #E6F0FA;
-  background: rgba(0, 0, 0, 0.35);
+  color: #E2EEF5;
+  background: rgba(4, 24, 38, 0.65);
 }
 
-/* 4.4 Mandatory Coders Club Showcase (Yale Navy Distinction) */
+/* Coders Club Showcase (Deep Circuit Navy-Teal Distinction) */
 .coders-club-section {
-  background: var(--yale-blue);
+  background: var(--acm-deep);
   color: #FFFFFF;
   padding: 64px 0;
 }
 
 .coders-club-section .section-label {
-  color: #9CC2E6;
+  color: var(--acm-cyan);
+}
+
+.coders-club-section .section-header h2 {
+  color: #FFFFFF;
 }
 
 .coders-club-section .section-header p {
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .cc-subheading {
@@ -455,13 +462,13 @@ section.content-page {
   font-size: 1.35rem;
   margin: 36px 0 18px;
   padding-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(114, 199, 245, 0.25);
 }
 
 .cc-card {
-  background: var(--yale-dark);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-top: 3px solid #9CC2E6;
+  background: var(--acm-darker);
+  border: 1px solid rgba(114, 199, 245, 0.2);
+  border-top: 3px solid var(--acm-blue-bright);
   padding: 22px;
 }
 
@@ -471,12 +478,12 @@ section.content-page {
 }
 
 .cc-card .meta {
-  color: #9CC2E6;
+  color: var(--acm-cyan);
 }
 
 .cc-card p,
 .cc-card li {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.92rem;
 }
 
@@ -486,28 +493,18 @@ section.content-page {
 }
 
 .cc-card .poster-img {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(114, 199, 245, 0.22);
 }
 
-.cc-placeholder {
-  background: rgba(255, 255, 255, 0.12);
-  border-left: 3px solid #9CC2E6;
-  padding: 4px 8px;
-  font-size: 0.84rem;
-  color: #E6F0FA;
-  display: inline-block;
-  margin-top: 6px;
-}
-
-/* 4.6 Leadership Hierarchy */
-.subheading-crimson {
+/* Leadership Hierarchy */
+.subheading-primary {
   margin-bottom: 16px;
-  color: var(--crimson);
+  color: var(--acm-deep);
 }
 
-.subheading-navy {
+.subheading-slate {
   margin: 36px 0 16px;
-  color: var(--yale-blue);
+  color: var(--acm-slate);
 }
 
 .leadership-grid-gap {
@@ -519,20 +516,20 @@ section.content-page {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--crimson);
+  color: var(--acm-blue);
   margin-bottom: 4px;
   display: block;
 }
 
-.role-badge.navy {
-  color: var(--yale-blue);
+.role-badge.slate {
+  color: var(--acm-slate);
 }
 
-.card.navy-top {
-  border-top-color: var(--yale-blue);
+.card.slate-top {
+  border-top-color: var(--acm-slate);
 }
 
-/* 4.7 Impact Strip */
+/* Impact Strip */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -542,6 +539,7 @@ section.content-page {
 
 .stat-box {
   border: 1px solid var(--border);
+  border-top: 3px solid var(--acm-blue);
   background: var(--bg-white);
   padding: 22px;
   text-align: center;
@@ -551,7 +549,7 @@ section.content-page {
   font-family: 'Libre Baskerville', serif;
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--crimson);
+  color: var(--acm-blue);
   display: block;
   margin-bottom: 6px;
 }
@@ -567,8 +565,8 @@ section.content-page {
 
 /* Footer */
 footer {
-  background: #141414;
-  color: #D4D4D4;
+  background: #072436;
+  color: #D2E0E9;
   padding: 48px 0 32px;
   font-size: 0.9rem;
 }
@@ -587,7 +585,7 @@ footer h3 {
 }
 
 footer a {
-  color: #9CC2E6;
+  color: var(--acm-cyan);
   text-decoration: none;
 }
 
@@ -595,41 +593,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.footer-meta {
-  display: block;
-  font-size: 0.84rem;
-  color: #A8A8A8;
-  margin-bottom: 10px;
-}
-
 .footer-address {
   margin-top: 12px;
   font-size: 0.85rem;
-  color: #BDBDBD;
-}
-
-.footer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-list li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-}
-
-.footer-note {
-  margin-top: 14px;
-  font-size: 0.82rem;
-  color: #A8A8A8;
+  color: #BDD0DC;
 }
 
 .footer-bottom {
-  border-top: 1px solid #2E2E2E;
+  border-top: 1px solid rgba(114, 199, 245, 0.18);
   padding-top: 20px;
   font-size: 0.82rem;
-  color: #9A9A9A;
+  color: #9BB4C4;
 }
 
 @media (max-width: 820px) {
